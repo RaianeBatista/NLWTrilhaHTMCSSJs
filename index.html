@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>AppTrip</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+<script>dayjs.locale('pt-br')</script>
+
+<link rel="stylesheet" href="style.css">
+
+   <script src="script.js" defer></script>
+     </head>
+     <body>
+      
+  
+
+
+<div id="app">
+  <form onsubmit="salvarAtividade(event)">
+
+<div class="fields">
+    <div class="field-wrapper">
+    <input 
+    type="text" placeholder="Qual a atividade?"
+    name="atividade"
+    required
+    >
+   </div>
+
+  <div class="field-wrapper">
+  <select name="dia">
+    <option value="2024-03-01">01 de fevereiro</option>
+  </select>
+  </div>
+
+  <div class="field-wrapper">
+  <select name="hora">
+  <option value="10:30">10:30</option>
+  </select>
+  </div>
+  </div>
+
+
+  <button>Salvar atividade</button>
+  </form>
+
+  <main>
+
+  <h1>Atividades</h1>
+  <section></section>
+
+
+  </main>
+
+</div>
+
+ </body>
+</html>
