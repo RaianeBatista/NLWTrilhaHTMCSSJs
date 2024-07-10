@@ -59,12 +59,32 @@ type="checkbox"
   const formatar = formatador(atividade.data);
 
   return `
-<div >
+<div class="card-bg" >
 ${input} 
+
+<div>
+    <svg class="active" width="800px" height="800px" opacity="0.9"   fill="#fff" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="10" stroke="#1C274C" stroke-width="1.5"/>
+    <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+    <svg class="inactive width="800px" height="800px" opacity="0.5" fill="#fff"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+</svg>
+
 <span>${atividade.nome}</span>
-<time>
+
+</div>
+
+<time class= "short">
+${formatar.dia.semana.curto}.
+${formatar.dia.numerico} <br>
+${formatar.hora}
+</time>
+
+<time class = "full">
 ${formatar.dia.semana.longo}, 
-dia ${formatar.dia.numerico} 
+dia ${formatar.dia.numerico}
 de ${formatar.mes} 
 às ${formatar.hora}h</time>
 </div> 
